@@ -56,14 +56,6 @@ report = classification_report(y_test, y_pred)
 logger.info(f'Accuracy: {accuracy}')
 logger.info(f'\nClassification Report:\n{report}')
 
-# After evaluating the model
-logger.info("Evaluating the model...")
-y_pred = model.predict(X_test)
-accuracy = accuracy_score(y_test, y_pred)
-report = classification_report(y_test, y_pred)
-logger.info(f'Accuracy: {accuracy}')
-logger.info(f'\nClassification Report:\n{report}')
-
 # Save model and encoders
 logger.info("Saving model and encoders...")
 joblib.dump(model, 'models/mushroom_classifier.pkl')
